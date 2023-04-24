@@ -13,31 +13,6 @@ public class DLLmaker {
     5: tail node = bigger child of root node, value = 15
      */
 
-
-    public static ArrayList<BTnode> orderBTnodes(ArrayList<BTnode> givenBTnodes){
-
-        Collections.sort(givenBTnodes, new Comparator() {
-
-            @Override
-            public int compare(Object o1, Object o2) {
-                Integer order1 = ((BTnode) o1).getOrder();
-                Integer order2 = ((BTnode) o2).getOrder();
-                int orderComp = order1.compareTo(order2);
-
-                if (orderComp != 0) {
-                    return orderComp;
-                }
-
-                Integer value1 = ((BTnode) o1).getValue();
-                Integer value2 = ((BTnode) o2).getValue();
-                return value1.compareTo(value2);
-            }
-        });
-
-        givenBTnodes.forEach(node -> System.out.println("node: " + node.getOrder() + " | " + node.getValue()));
-        return givenBTnodes;
-    }
-
     public static LinkedList<LLnode> makeDLL(ArrayList<BTnode> orderedBTnodes){
         LinkedList<LLnode> result = new LinkedList<LLnode>();
 

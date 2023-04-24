@@ -78,8 +78,6 @@ public class BTtoDLLTest {
 
     @Test
     public void checkIfDLLhasCorrectEnds(){
-        LinkedList<LLnode> testDLL = new LinkedList<LLnode>();
-
         BTnode rootNode = new BTnode(0, 10, null,null);
         BTnode biggerChildNode = new BTnode(1, 15, rootNode, null);
         BTnode smallerChildNode = new BTnode(1, 12, rootNode, null);
